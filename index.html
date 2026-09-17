@@ -1,0 +1,1764 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>جزوه جامع و تعاملی ایمونولوژی در بیماری‌های روماتولوژیک | دکتر حسین سلیمانی</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap');
+
+    :root {
+      --primary:      #1a237e;
+      --secondary:    #283593;
+      --accent1:      #0277bd;
+      --accent2:      #00838f;
+      --accent3:      #6a1b9a;
+      --accent4:      #ad1457;
+      --accent5:      #e65100;
+      --bg:           #f4f7fc;
+      --card:         #ffffff;
+      --text:         #1a1a2e;
+      --muted:        #546e7a;
+      --border:       #c5cae9;
+      --green:        #1b5e20;
+      --greenlight:   #e8f5e9;
+      --redlight:     #ffebee;
+      --red:          #b71c1c;
+      --yellowlight:  #fff8e1;
+      --yellow:       #f57f17;
+      --bluelight:    #e3f2fd;
+      --blue:         #0d47a1;
+      --purplelight:  #f3e5f5;
+      --purple:       #4a148c;
+      --teallight:    #e0f7fa;
+      --teal:         #006064;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Vazirmatn', Tahoma, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.9;
+      font-size: 15px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ===== COVER ===== */
+    .cover {
+      background: linear-gradient(135deg, #0d1b5e 0%, #1a237e 45%, #0277bd 100%);
+      color: white;
+      text-align: center;
+      padding: 70px 30px 60px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 8px 30px rgba(13,27,94,0.3);
+    }
+    .cover::before {
+      content: '';
+      position: absolute;
+      top: -90px; left: -90px;
+      width: 320px; height: 320px;
+      background: rgba(255,255,255,0.06);
+      border-radius: 50%;
+    }
+    .cover::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; right: -80px;
+      width: 280px; height: 280px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 50%;
+    }
+    .cover .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.35);
+      border-radius: 50px;
+      padding: 7px 22px;
+      font-size: 13.5px;
+      letter-spacing: 0.5px;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+    .cover h1 {
+      font-size: 2.3em;
+      font-weight: 900;
+      margin-bottom: 14px;
+      text-shadow: 0 3px 10px rgba(0,0,0,0.35);
+      line-height: 1.4;
+    }
+    .cover h2 {
+      font-size: 1.25em;
+      font-weight: 400;
+      opacity: 0.92;
+      margin-bottom: 35px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.8;
+    }
+    .cover .meta {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .cover .meta-item {
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.22);
+      border-radius: 14px;
+      padding: 12px 24px;
+      font-size: 13px;
+      backdrop-filter: blur(5px);
+    }
+    .cover .meta-item span { display: block; font-weight: 700; font-size: 15px; margin-top: 4px; }
+
+    /* ===== TOC ===== */
+    .toc {
+      background: white;
+      margin: 35px auto;
+      max-width: 960px;
+      border-radius: 18px;
+      padding: 30px 40px;
+      box-shadow: 0 4px 25px rgba(26,35,126,0.07);
+      border-right: 6px solid var(--primary);
+    }
+    .toc h3 {
+      font-size: 1.3em;
+      color: var(--primary);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+    }
+    .toc ol {
+      padding-right: 24px;
+      column-count: 2;
+      column-gap: 30px;
+    }
+    @media (max-width: 768px) { .toc ol { column-count: 1; } }
+    .toc ol li {
+      padding: 6px 0;
+      color: var(--secondary);
+      font-weight: 600;
+      font-size: 13.5px;
+      line-height: 1.6;
+    }
+    .toc ol li a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .toc ol li a:hover { color: var(--accent1); }
+
+    /* ===== MAIN WRAPPER ===== */
+    .main {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 0 20px 80px;
+    }
+
+    /* ===== SECTION HEADER ===== */
+    .section-header {
+      border-radius: 16px;
+      padding: 18px 25px;
+      margin: 45px 0 22px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      color: white;
+      font-size: 1.25em;
+      font-weight: 800;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    }
+    .section-header .icon {
+      font-size: 1.4em;
+      background: rgba(255,255,255,0.22);
+      border-radius: 50%;
+      width: 44px; height: 44px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .sh-blue   { background: linear-gradient(135deg, #1565c0, #0288d1); }
+    .sh-purple { background: linear-gradient(135deg, #6a1b9a, #8e24aa); }
+    .sh-teal   { background: linear-gradient(135deg, #00695c, #00897b); }
+    .sh-red    { background: linear-gradient(135deg, #b71c1c, #d32f2f); }
+    .sh-orange { background: linear-gradient(135deg, #e65100, #f57c00); }
+    .sh-green  { background: linear-gradient(135deg, #1b5e20, #2e7d32); }
+    .sh-indigo { background: linear-gradient(135deg, #283593, #3949ab); }
+    .sh-cyan   { background: linear-gradient(135deg, #006064, #00838f); }
+
+    /* ===== SUBSECTION ===== */
+    .subsection {
+      background: white;
+      border-radius: 14px;
+      padding: 26px 30px;
+      margin-bottom: 24px;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.04);
+      border-top: 4px solid transparent;
+    }
+    .sub-blue   { border-top-color: #1565c0; }
+    .sub-purple { border-top-color: #6a1b9a; }
+    .sub-teal   { border-top-color: #00695c; }
+    .sub-red    { border-top-color: #b71c1c; }
+    .sub-orange { border-top-color: #e65100; }
+    .sub-green  { border-top-color: #1b5e20; }
+    .sub-indigo { border-top-color: #283593; }
+    .sub-cyan   { border-top-color: #006064; }
+
+    .subsection h4 {
+      font-size: 1.15em;
+      font-weight: 800;
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 2px dashed var(--border);
+      color: var(--secondary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* ===== INFO BOX ===== */
+    .infobox {
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin: 16px 0;
+      display: flex;
+      gap: 14px;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    .infobox .ib-icon { font-size: 1.35em; flex-shrink: 0; margin-top: 1px; }
+    .ib-blue   { background: var(--bluelight);   border-right: 5px solid #1565c0; color: #0d1b5e; }
+    .ib-green  { background: var(--greenlight);  border-right: 5px solid #2e7d32; color: #1b3a1f; }
+    .ib-red    { background: var(--redlight);    border-right: 5px solid #c62828; color: #5c0000; }
+    .ib-yellow { background: var(--yellowlight); border-right: 5px solid #f9a825; color: #4a2c00; }
+    .ib-purple { background: var(--purplelight); border-right: 5px solid #6a1b9a; color: #2d0048; }
+    .ib-teal   { background: var(--teallight);   border-right: 5px solid #006064; color: #003033; }
+
+    /* ===== LIST STYLES ===== */
+    .list-styled {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0;
+    }
+    .list-styled li {
+      padding: 7px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      border-bottom: 1px dotted #e8eaf6;
+    }
+    .list-styled li:last-child { border-bottom: none; }
+    .list-styled li::before {
+      content: '◈';
+      color: var(--accent1);
+      flex-shrink: 0;
+      margin-top: 1px;
+      font-size: 13px;
+    }
+    .list-styled.green li::before  { color: #2e7d32; }
+    .list-styled.red li::before    { color: #c62828; }
+    .list-styled.purple li::before { color: #6a1b9a; }
+    .list-styled.teal li::before   { color: #006064; }
+    .list-styled.orange li::before { color: #e65100; }
+    
+    .li-content {
+      flex: 1;
+      display: inline;
+      line-height: 1.8;
+      color: var(--text);
+    }
+
+    /* ===== KEY-VALUE ROW ===== */
+    .kv-row {
+      padding: 8px 0;
+      font-size: 14px;
+      border-bottom: 1px dotted #e0e4f8;
+      line-height: 1.8;
+    }
+    .kv-row:last-child { border-bottom: none; }
+    .kv-key {
+      font-weight: 700;
+      color: var(--secondary);
+      display: inline;
+      margin-left: 6px;
+    }
+    .kv-value {
+      color: var(--text);
+      display: inline;
+    }
+
+    /* ===== TAGS / PILLS ===== */
+    .tag {
+      display: inline-block;
+      padding: 3px 11px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      margin: 2px 3px;
+    }
+    .tag-blue   { background: #e3f2fd; color: #0d47a1; }
+    .tag-red    { background: #ffebee; color: #b71c1c; }
+    .tag-green  { background: #e8f5e9; color: #1b5e20; }
+    .tag-purple { background: #f3e5f5; color: #4a148c; }
+    .tag-orange { background: #fff3e0; color: #e65100; }
+    .tag-teal   { background: #e0f7fa; color: #006064; }
+    .tag-yellow { background: #fff8e1; color: #f57f17; }
+
+    /* ===== TABLE ===== */
+    .table-wrap {
+      overflow-x: auto;
+      margin: 18px 0;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      border: 1px solid #e0e4f8;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      background: white;
+    }
+    table thead tr {
+      background: var(--primary);
+      color: white;
+    }
+    table thead th {
+      padding: 13px 15px;
+      text-align: right;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      border-bottom: 2px solid #0d1b5e;
+    }
+    table tbody tr:nth-child(even) { background: #f8faff; }
+    table tbody tr:hover { background: #edf2ff; }
+    table tbody td {
+      padding: 11px 15px;
+      border-bottom: 1px solid #e0e4f8;
+      vertical-align: top;
+      line-height: 1.7;
+    }
+    table tbody tr:last-child td { border-bottom: none; }
+
+    /* ===== HIGHLIGHT BADGE ===== */
+    .hbadge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: linear-gradient(135deg, #fff9c4, #ffee58);
+      color: #4a2c00;
+      border: 1px solid #fbc02d;
+      border-radius: 8px;
+      padding: 3px 10px;
+      font-size: 12px;
+      font-weight: 800;
+      margin: 2px 0;
+    }
+
+    /* ===== GRID 2-COL & 3-COL ===== */
+    .grid2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 16px 0;
+    }
+    @media(max-width:680px){ .grid2 { grid-template-columns: 1fr; } }
+
+    .grid3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 14px;
+      margin: 16px 0;
+    }
+    @media(max-width:768px){ .grid3 { grid-template-columns: 1fr; } }
+
+    /* ===== MINI CARD ===== */
+    .mini-card {
+      border-radius: 12px;
+      padding: 16px 18px;
+      font-size: 13.5px;
+      line-height: 1.8;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    }
+    .mc-blue   { background: #e8eaf6; border-right: 4px solid #3949ab; }
+    .mc-green  { background: #e8f5e9; border-right: 4px solid #388e3c; }
+    .mc-red    { background: #ffebee; border-right: 4px solid #e53935; }
+    .mc-purple { background: #f3e5f5; border-right: 4px solid #8e24aa; }
+    .mc-orange { background: #fff3e0; border-right: 4px solid #f4511e; }
+    .mc-teal   { background: #e0f7fa; border-right: 4px solid #00838f; }
+    .mini-card h5 { font-weight: 800; margin-bottom: 8px; font-size: 14px; color: var(--secondary); }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: var(--primary);
+      color: rgba(255,255,255,0.88);
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 13.5px;
+      margin-top: 70px;
+      border-top: 4px solid var(--accent1);
+    }
+
+    strong.em  { color: #b71c1c; font-weight: 800; }
+    strong.em2 { color: #1565c0; font-weight: 800; }
+    strong.em3 { color: #2e7d32; font-weight: 800; }
+
+    /* ===== سیستم تعاملی یادداشت‌های درون‌متنی ===== */
+    .note-marker {
+      background-color: #ffd54f !important;
+      border: 1px solid #ffb300 !important;
+      color: #000 !important;
+      border-radius: 4px !important;
+      cursor: pointer !important;
+      padding: 1px 4px !important;
+      margin: 0 3px !important;
+      font-size: 11px !important;
+      user-select: none !important;
+      display: inline-block !important;
+      vertical-align: middle !important;
+      font-weight: bold !important;
+      position: relative;
+      animation: notePulse 2s infinite;
+    }
+    @keyframes notePulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.15); }
+      100% { transform: scale(1); }
+    }
+
+    .note-tooltip {
+      display: none;
+      position: absolute;
+      bottom: 125%;
+      right: 0;
+      background: #37474f;
+      color: #ffffff;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 12px;
+      min-width: 180px;
+      max-width: 250px;
+      z-index: 1000;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+      white-space: normal;
+      line-height: 1.5;
+      font-weight: normal;
+      text-align: right;
+    }
+    .note-marker:hover .note-tooltip, .note-marker:active .note-tooltip {
+      display: block !important;
+    }
+
+    /* ===== پنجره مودال ===== */
+    .modal-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(26, 35, 126, 0.5);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 10000;
+      direction: rtl;
+    }
+    .modal-card {
+      background: white;
+      border-radius: 16px;
+      padding: 24px;
+      width: 90%;
+      max-width: 500px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+      border-top: 5px solid var(--primary);
+    }
+    .modal-card h4 {
+      margin-bottom: 14px;
+      color: var(--primary);
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .modal-textarea {
+      width: 100%;
+      height: 120px;
+      padding: 10px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-family: inherit;
+      resize: none;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+    .modal-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+    .btn {
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-family: inherit;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+      font-size: 13px;
+    }
+    .btn-primary { background: var(--primary); color: white; }
+    .btn-danger { background: var(--red); color: white; }
+    .btn-secondary { background: #eceff1; color: #37474f; }
+
+    /* ===== نوار ابزار تعاملی انتهای صفحه ===== */
+    #highlight-panel {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: white;
+      box-shadow: 0 10px 35px rgba(0,0,0,0.2);
+      border-radius: 50px;
+      padding: 10px 20px;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border: 2px solid var(--primary);
+      direction: rtl;
+      width: max-content;
+      max-width: 95%;
+    }
+    #highlight-panel span {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .hl-btn {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      border: 1px solid rgba(0,0,0,0.2);
+      cursor: pointer;
+      transition: transform 0.1s;
+    }
+    .hl-btn:hover { transform: scale(1.15); }
+    .hl-btn-yellow { background-color: #fff59d; }
+    .hl-btn-green  { background-color: #c8e6c9; }
+    .hl-btn-blue   { background-color: #bbdefb; }
+    .hl-btn-pink   { background-color: #f8bbd0; }
+    .panel-action-btn {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 11.5px;
+      font-weight: bold;
+      cursor: pointer;
+      font-family: inherit;
+      transition: opacity 0.15s;
+    }
+    .panel-action-btn:hover { opacity: 0.9; }
+    .panel-action-btn-red { background: var(--red); }
+  </style>
+</head>
+<body>
+
+<!-- ===================== COVER ===================== -->
+<div class="cover">
+  <div class="badge">📘 دوره فیزیوپاتولوژی بالینی پزشکی | کرس بیماری‌های روماتولوژی</div>
+  <h1>ایمونولوژی در بیماری‌های روماتولوژیک</h1>
+  <h2>منطبق با گفتار کلاسی، اسلایدها و ترتیب خطی تدریس دکتر حسین سلیمانی</h2>
+  <div class="meta">
+    <div class="meta-item">مدرس: <span>دکتر حسین سلیمانی (استادیار روماتولوژی)</span></div>
+    <div class="meta-item">تنظیم و انطباق ترتیبی: <span>احمدرضا عبداللهی پور</span></div>
+    <div class="meta-item">پشتیبانی و فایل‌ها: <span>بات تلگرام Medical_house_bot@</span></div>
+  </div>
+</div>
+
+<!-- ===================== TOC ===================== -->
+<div class="toc">
+  <h3>📋 فهرست تفصیلی سرفصل‌ها به ترتیب ارائه و وویس استاد</h3>
+  <ol>
+    <li><a href="#sec-intro">مقدمه، تعریف روماتولوژی، منابع و مفهوم تحمل ایمونولوژیک</a></li>
+    <li><a href="#sec-preview">پیش‌نمایش مقدماتی بالینی و سلولی-مولکولی استاد (اسلایدهای آغازین)</a></li>
+    <li><a href="#sec-innate-adaptive">ارکان سیستم دفاعی: مقایسه جامع ایمنی ذاتی (Innate) و اکتسابی (Adaptive)</a></li>
+    <li><a href="#sec-barriers">سدهای دفاعی فیزیکی و بیوشیمیایی (Barriers)</a></li>
+    <li><a href="#sec-complement">سیستم کمپلمان: آبشار فعال‌سازی و رفتار متناقض آن در لوپوس (SLE)</a></li>
+    <li><a href="#sec-innate-cells">سلول‌های ایمنی ذاتی و دودمان‌های خونسازی (NK، فاگوسیت‌ها و گرانولوسیت‌ها)</a></li>
+    <li><a href="#sec-tcells">لنفوسیت‌های T: مدل دو سیگنال، آنرژی، داروی آباتاسپت و سیتوتوکسیسیته</a></li>
+    <li><a href="#sec-cytokines">شبکه سایتوکین‌ها: محور Th1/Th2/Th17، آسیب‌شناسی IL-17 و مهارکننده‌ها</a></li>
+    <li><a href="#sec-bcells">لنفوسیت‌های B، تمایز به پلاسماسل و بیولوژی آنتی‌بادی‌ها</a></li>
+    <li><a href="#sec-tlrs-detailed">بررسی تفصیلی گیرنده‌های شبه‌تول (جدول کامل ۱۰ گانه TLRs و سلول‌های دندریتیک)</a></li>
+    <li><a href="#sec-mhc-detailed">کمپلکس سازگاری بافتی اصلی (MHC/HLA): مقایسه کلاس I و II و ژنتیک</a></li>
+    <li><a href="#sec-tolerance-etiology">تحمل ایمونولوژیک (Tolerance)، اتیولوژی خودایمنی و جداول RF و Mimicry</a></li>
+    <li><a href="#sec-clinical">مرور بیماری‌های ماژور روماتولوژیک (RA، لوپوس، AS، میوپاتی‌ها، اسکلرودرمی و آرتروز)</a></li>
+    <li><a href="#sec-bone">بیولوژی بافت استخوان: سلول‌ها، ماتریکس و چرخه بازسازی (Bone Remodeling)</a></li>
+    <li><a href="#sec-rank">محور تنظیمی RANK / RANKL / OPG (سؤال قطعی امتحانی استاد)</a></li>
+    <li><a href="#sec-cartilage">بیولوژی و بیومکانیک غضروف مفصلی: کندروسیت، اگریکان، ۴ لایه و خاصیت اسفنجی</a></li>
+    <li><a href="#sec-synovium">غشای سینوویال، سینوویوسیت‌ها و مفهوم فوق‌العاده حیاتی انتزیس (Enthesis)</a></li>
+    <li><a href="#sec-muscle">یادآوری بافت عضلانی و ارتباط آن با میوپاتی‌های التهابی</a></li>
+    <li><a href="#sec-exam">جمع‌بندی نکات طلایی و سؤالات احتمالی آزمون فیزیوپاتولوژی</a></li>
+  </ol>
+</div>
+
+<!-- ===================== MAIN CONTENT ===================== -->
+<div class="main">
+
+  <!-- SECTION 1 -->
+  <div class="section-header sh-blue" id="sec-intro">
+    <div class="icon">🩺</div>
+    <div>۱. مقدمه، تعریف علم روماتولوژی، منابع و مفهوم تحمل ایمونولوژیک</div>
+  </div>
+
+  <div class="subsection sub-blue">
+    <h4>جایگاه روماتولوژی در طب بالینی و هدف سیستم ایمنی</h4>
+    <p>علم روماتولوژی شاخه‌ای فوق‌تخصصی از طب داخلی (یا اطفال) است که به بررسی، تشخیص، پاتوفیزیولوژی و درمان بیماری‌های اسکلتی-عضلانی (<span class="tag tag-blue">Musculoskeletal</span>) و به ویژه بیماری‌های سیستمیک خودایمن (<span class="tag tag-purple">Systemic Autoimmune Conditions</span>) می‌پردازد. این طیف وسیع از بیماری‌ها مراجعین بسیار زیادی به کلینیک‌ها و بیمارستان‌ها دارند و فارغ از تخصص آینده‌تان، با آن‌ها مواجه خواهید شد.</p>
+
+    <div class="infobox ib-blue">
+      <span class="ib-icon">🏛️</span>
+      <div>
+        <strong>تعریف بالینی ACR (کالج آمریکایی روماتولوژی):</strong><br>
+        «تظاهرات تیپیک این بیماری‌ها شامل درد، ناراحتی، محدودیت حرکتی، تورم مفصلی، سفتی صبحگاهی (Stiffness) و تغییر شکل مفصلی (Deformity) در استخوان‌ها، مفاصل و بافت‌های نرم همبند است.»
+      </div>
+    </div>
+
+    <ul class="list-styled">
+      <li><span class="li-content"><strong>منابع مرجع مطالعه:</strong> برای مبانی ایمونولوژی «ایمونولوژی ابوالعباس (Abul Abbas)» و برای مباحث خودایمنی «کتاب هاریسون - بخش بیماری‌های روماتولوژی و اتوایمیونیتی».</span></li>
+      <li><span class="li-content"><strong>فلسفه فرگشتی سیستم ایمنی:</strong> این سیستم طی میلیون‌ها سال تکامل یافته تا مانع از عوارض و آسیب پاتوژن‌های بیماری‌زا در میزبان شود.</span></li>
+      <li><span class="li-content"><strong>تحمل ایمونولوژیک (Immunologic Tolerance):</strong> به مجموعه مکانیسم‌های تنظیمی بدن که مانع از واکنش سیستم ایمنی علیه بافت‌های خودی می‌شود، تولرانس می‌گویند. شکست این سد تنظیمی زمینه‌ساز پدید آمدن بیماری‌های خودایمن (Autoimmunity) است.</span></li>
+    </ul>
+  </div>
+
+  <!-- SECTION 2 -->
+  <div class="section-header sh-orange" id="sec-preview">
+    <div class="icon">👀</div>
+    <div>۲. پیش‌نمایش مقدماتی بالینی و مولکولی استاد (اسلایدهای ابتدایی)</div>
+  </div>
+
+  <div class="subsection sub-orange">
+    <h4>مرور پرنده‌وار و مقدماتی بر ارتباط TLRها، سلول‌های دندریتیک و مدل مفصل RA</h4>
+    <p>استاد در اسلایدهای ابتدایی جلسه، پیش از ورود به بحث تفصیلی، یک نمای کلی از مسیر پیام‌رسانی و پل ارتباطی ایمنی ذاتی و اکتسابی را با ذکر مثال ملموس بیماری <strong>آرتریت روماتوئید (RA)</strong> تشریح می‌فرمایند:</p>
+
+    <div class="mini-card mc-orange" style="margin-bottom:14px;">
+      <h5>۱. گیرنده‌های شبه‌تول (TLRs) به عنوان دیده‌بان‌های خط اول:</h5>
+      <p>گیرنده‌هایی در سطح سلول یا داخل اندوزوم هستند که مشتقات ساختاری پاتوژن‌ها موسوم به <strong>PAMP</strong> (الگوهای مولکولی وابسته به پاتوژن) را شناسایی می‌کنند. به دنبال فعال شدن TLRها، آبشارهای التهابی کینازی نظیر <strong>NF-κB</strong>، <strong>MAPK</strong> و <strong>Jak/STAT</strong> سیگنال را به هسته فرستاده و ترانسکریپشن سایتوکین‌ها (IL-1β, TNF)، فاکتورهای رشد، لکوترین‌ها، نیتریک اکساید (NO) و متالوپروتئینازهای ماتریکس (MMPs) آغاز می‌گردد.</p>
+    </div>
+
+    <div class="mini-card mc-purple" style="margin-bottom:14px;">
+      <h5>۲. سلول‌های دندریتیک (Dendritic Cells):</h5>
+      <p>قوی‌ترین و ماهرترین سلول‌های ارائه‌دهنده آنتی‌ژن (Professional APC) که آنتی‌ژن را گرفته، پردازش نموده و به لنفوسیت‌ها عرضه می‌کنند. استاد تأکید دارند که این سلول‌ها عمدتاً در بافت‌های لنفاوی مقیم بوده و به دو نوع <strong>میلوئید (mDC)</strong> و <strong>پلاسماسایتوئید (pDC)</strong> تقسیم می‌شوند. سلول‌های pDC با تولید مقادیر انبوه <span class="em">اینترفرون آلفا (IFN-α)</span> نقش محوری در پاتوژنز <strong>بیماری لوپوس (SLE)</strong> دارند.</p>
+    </div>
+
+    <div class="mini-card mc-red">
+      <h5>۳. پل ارتباطی ایمنی ذاتی و اختصاصی؛ مدل دست در آرتریت روماتوئید (RA):</h5>
+      <p>آرتریت روماتوئید شایع‌ترین بیماری التهابی خودایمن مفصلی در انسان است که با سینوویت مزمن و تخریب غضروف تظاهر می‌یابد. در این بیماری:</p>
+      <ul class="list-styled red">
+        <li><span class="li-content"><strong>درگیری مفاصل دست:</strong> مفاصل متاکارپوفالانژیال (MCP) و بندهای پروگزیمال (PIP) دچار آسیب شدید و تورم می‌شوند؛ در حالی که بندهای دیستال (DIP) معمولاً درگیر نمی‌شوند. یکی از دفرمیتی‌های بارز دست، <strong>تغییر شکل گردن قو (Swan Neck Deformity)</strong> است.</span></li>
+        <li><span class="li-content"><strong>شبکه انترکشن سلولی (شکل اسلاید):</strong> در مرکز واقعه، سلول <strong>T helper (CD4+)</strong> قرار دارد؛ این سلول با ترشح مدیاتورها لنفوسیت B را فعال کرده، B سل به پلاسماسل تمایز یافته و <strong>فاکتور روماتوئید (RF)</strong> می‌سازد. از سوی دیگر T سل با ترشح اینترفرون، ماکروفاژ را تحریک نموده و ماکروفاژ با آزاد کردن TNF-α، IL-1 و IL-6، به صورت همزمان کندروسیت‌ها، فیبروبلاست‌های سینوویوم و استئوکلاست‌ها را برانگیخته و تخریب مفصل را رقم می‌زند.</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SECTION 3 -->
+  <div class="section-header sh-teal" id="sec-innate-adaptive">
+    <div class="icon">🛡️</div>
+    <div>۳. ارکان سیستم دفاعی: مقایسه جامع ایمنی ذاتی و اکتسابی</div>
+  </div>
+
+  <div class="subsection sub-teal">
+    <h4>ورود سیستماتیک به ایمونولوژی: دو شاخه اصلی دفاعی بدن</h4>
+    <p>استاد در این بخش توضیح می‌دهند که پس از دیدن نمای کلی، حال به تفکیک ساختارها می‌پردازیم. سیستم ایمنی بدن به دو شاخه ذاتی و اکتسابی تقسیم می‌شود که اولی باید فعال گردد تا زمینه فعال‌سازی دومی را فراهم سازد:</p>
+
+    <div class="grid2">
+      <div class="mini-card mc-teal">
+        <h5>۱. ایمنی ذاتی (Innate Immunity)</h5>
+        <ul class="list-styled teal">
+          <li><span class="li-content"><strong>سرعت پاسخ:</strong> بسیار سریع و آنی (دقایق تا ساعت اولیه برخورد با پاتوژن).</span></li>
+          <li><span class="li-content"><strong>ویژگی آنتی‌ژنی:</strong> غیر اختصاصی (Non-specific)؛ شناسایی الگوهای عمومی.</span></li>
+          <li><span class="li-content"><strong>حافظه ایمونولوژیک:</strong> فاقد حافظه (Memory).</span></li>
+          <li><span class="li-content"><strong>اجزای اصلی:</strong> سدهای فیزیکی و بیوشیمیایی، آبشار کمپلمان و سلول‌های فاگوسیت و دانه‌دار.</span></li>
+        </ul>
+      </div>
+
+      <div class="mini-card mc-blue">
+        <h5>۲. ایمنی اکتسابی یا اختصاصی (Adaptive Immunity)</h5>
+        <ul class="list-styled">
+          <li><span class="li-content"><strong>سرعت پاسخ:</strong> آهسته‌تر و نیازمند زمان جهت کلونال اکسپنشن (روزها تا هفته‌ها).</span></li>
+          <li><span class="li-content"><strong>ویژگی آنتی‌ژنی:</strong> فوق‌العاده اختصاصی برای یک پپتید یا اپی‌توپ خاص.</span></li>
+          <li><span class="li-content"><strong>حافظه ایمونولوژیک:</strong> دارای سلول‌های خاطره پایدار (پاسخ بسیار سریع‌تر در برخوردهای بعدی).</span></li>
+          <li><span class="li-content"><strong>اجزای اصلی:</strong> ایمنی سلولی (T Cells) و ایمنی هومورال (B Cells و پلاسماسل‌ها).</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 4 -->
+  <div class="section-header sh-indigo" id="sec-barriers">
+    <div class="icon">🧱</div>
+    <div>۴. سدهای دفاعی فیزیکی و بیوشیمیایی (Barriers)</div>
+  </div>
+
+  <div class="subsection sub-indigo">
+    <h4>نخستین سدهای ممانعت از ورود میکروارگانیسم‌ها به میزبان</h4>
+    <div class="kv-row"><div class="kv-key">۱. پوست سالم (Skin):</div><div class="kv-value">سد فیزیکی نفوذناپذیر پوشانده با سبوم اسیدی ضدباکتری.</div></div>
+    <div class="kv-row"><div class="kv-key">۲. اشک و بزاق (Tears & Saliva):</div><div class="kv-value">مایعات شستشودهنده طبیعی حاوی آنزیم‌های باکتری‌سیدال نظیر لیزوزیم.</div></div>
+    <div class="kv-row"><div class="kv-key">۳. ترشحات مخاطی (Mucus):</div><div class="kv-value">سد ژلاتینی گلیکوپروتئینی در سطوح اپیتلیوم تنفسی، گوارشی و تناسلی جهت گیر انداختن میکروب‌ها.</div></div>
+    <div class="kv-row"><div class="kv-key">۴. اسید معده (Gastric Acid):</div><div class="kv-value">pH اسیدی قوی ناشی از کلریدریک اسید که اکثر باکتری‌های بلعیده‌شده را منهدم می‌سازد.</div></div>
+    <div class="kv-row"><div class="kv-key">۵. آنتاگونیسم میکروبی (Microbial Antagonism):</div><div class="kv-value">فلور باکتریایی نرمال مقیم در پوست و دستگاه گوارش که اجازه استقرار به پاتوژن‌ها نمی‌دهد.</div></div>
+  </div>
+
+  <!-- SECTION 5 -->
+  <div class="section-header sh-purple" id="sec-complement">
+    <div class="icon">⚡</div>
+    <div>۵. سیستم کمپلمان: آبشار فعال‌سازی و رفتار متناقض آن در لوپوس (SLE)</div>
+  </div>
+
+  <div class="subsection sub-purple">
+    <h4>مسیرهای فعال‌سازی، پیامدهای التهابی و نکته فوق‌العاده مهم بالینی استاد</h4>
+    <p>سیستم کمپلمان مجموعه‌ای از پروتئین‌های محلول سرمی است که منشأ ساختمانی اصلی آن‌ها در <strong>کبد</strong> قرار دارد. این پروتئین‌ها به دنبال آسیب بافتی یا عفونت در یک آبشار آنزیمی متوالی فعال می‌شوند.</p>
+
+    <div class="grid3">
+      <div class="mini-card mc-blue">
+        <h5>۱. مسیر کلاسیک (Classical)</h5>
+        <p>آغاز با اتصال کمپلکس آنتی‌ژن-آنتی‌بادی. کمپلکس به جزء <strong>C1</strong> (شامل C1q، سپس C1r و C1s) متصل شده و C1s پروتئین‌های C4 و C2 را شکسته و جزء C3 را فعال می‌کند.</p>
+      </div>
+
+      <div class="mini-card mc-teal">
+        <h5>۲. مسیر آلترناتیو (Alternative)</h5>
+        <p>فعال‌سازی مستقل از آنتی‌بادی مستقیماً روی سطوح پاتوژن‌ها به همراه فاکتور B، فاکتور D و پروتئین C3 که در نهایت به تشکیل C3 کانورتاز می‌انجامد.</p>
+      </div>
+
+      <div class="mini-card mc-purple">
+        <h5>۳. مسیر لکتین (MB-Lectin)</h5>
+        <p>اتصال پروتئین متصل‌شونده به مانوز (MBL) به قند مانوز دیواره پاتوژن‌ها، فعال‌سازی MASPها و در نهایت شکست C4 و C2 و فعال‌سازی مجدد C3.</p>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>فرآورده فعال کمپلمان</th>
+            <th>نقش پاتوفیزیولوژیک در بافت</th>
+            <th>اهمیت بالینی</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>C3b</strong></td>
+            <td><strong>اپسونیزاسیون (Opsonization):</strong> پوشاندن سطح سلول آلوده یا باکتری و تسهیل بلعیده شدن آن توسط فاگوسیت‌ها.</td>
+            <td>پاکسازی ایمونوکمپلکس‌ها از جریان خون.</td>
+          </tr>
+          <tr>
+            <td><strong>C3a و C5a</strong></td>
+            <td><strong>آنافیلاتوکسیل‌ها:</strong> مدیاتورهای بسیار قوی التهاب حاد، القای وازودیلاتاسیون شدید عروقی و حتی ایجاد شوک سپتیک.</td>
+            <td>فراخوانی وسیع سلول‌های التهابی به مفاصل.</td>
+          </tr>
+          <tr>
+            <td><strong>MAC (C5b-C9)</strong></td>
+            <td><strong>کمپلکس حمله به غشا:</strong> ایجاد حفرات و سوراخ‌های غشایی (Holes)، برهم‌زدن تبادلات یونی و در نهایت لیز سلول آلوده.</td>
+            <td>تخریب مستقیم سلول‌های هدف یا بافت‌های پوشیده از اتوآنتی‌بادی.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="infobox ib-yellow">
+      <span class="ib-icon">⚠️</span>
+      <div>
+        <span class="hbadge">نکته کلیدی و مکرر امتحانی مورد تأکید دکتر سلیمانی:</span><br>
+        پروتئین‌های کمپلمان از فاکتورهای فاز حاد هستند؛ بنابراین در عموم بیماری‌های التهابی و آرتریت روماتوئید سطح سرمی آن‌ها <strong>افزایش</strong> می‌یابد.<br>
+        <span class="em">اما استثنای بالینی حیاتی:</span> در بیماری <strong>لوپوس (SLE)</strong> و به ویژه هنگام <strong>نفریت فعال لوپوسی (Lupus Nephritis)</strong>، به دلیل فعال‌سازی شدید و توده‌ای مسیر کلاسیک توسط کمپلکس‌های ایمنی، <strong>مصرف کمپلمان (Consumption)</strong> رخ داده و سطوح سرمی <span class="tag tag-red">C3</span> و <span class="tag tag-red">C4</span> دچار افت معنادار می‌شوند!
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 6 -->
+  <div class="section-header sh-green" id="sec-innate-cells">
+    <div class="icon">🔬</div>
+    <div>۶. سلول‌های ایمنی ذاتی و دودمان‌های خونسازی (Hematopoiesis)</div>
+  </div>
+
+  <div class="subsection sub-green">
+    <h4>منشأ مغز استخوان و تفکیک سلول‌های گرانولار و فاگوسیت</h4>
+    <p>تمام سلول‌های خونی و ایمنی از سلول بنیادی خونساز مغز استخوان (<span class="tag tag-blue">Blood Stem Cell</span>) مشتق می‌شوند که به دو رده اصلی <strong>میلوئید (Myeloid)</strong> و <strong>لنفوئید (Lymphoid)</strong> تفکیک می‌گردند:</p>
+
+    <div class="grid2">
+      <div class="mini-card mc-teal">
+        <h5>سلول‌های کشنده طبیعی (NK Cells)</h5>
+        <p>از رده لنفوئیدی اما با عملکرد ذاتی؛ لنفوسیت‌های گرانولار بزرگ (Large Granular)؛ لیز و تخریب مستقیم سلول‌های آلوده به ویروس و تومورال با چسبیدن به هدف و ایجاد سوراخ‌های غشایی توسط گرانول‌های <strong>پرفورین (Perforin)</strong> بدون نیاز به تحریک قبلی.</p>
+      </div>
+
+      <div class="mini-card mc-blue">
+        <h5>سلول‌های فاگوسیت‌کننده (Phagocytes)</h5>
+        <ul class="list-styled">
+          <li><span class="li-content"><strong>نوتروفیل‌ها:</strong> بیشترین لکوسیت‌های در گردش خون (حدود ۷۰٪ WBCها)؛ سلول‌های چند هسته‌ای (PMNs) در خط مقدم دفاع حاد.</span></li>
+          <li><span class="li-content"><strong>ماکروفاژها:</strong> سلول‌های بزرگ تک‌هسته‌ای بافتی منشأگرفته از مونوسیت‌های خون؛ فاگوسیتوز دبری‌ها و ایفای نقش حیاتی APC.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="grid2" style="margin-top:14px;">
+      <div class="mini-card mc-orange">
+        <h5>ائوزینوفیل‌ها (Eosinophils)</h5>
+        <p>سلول‌های گرانولوسیتی با نقش دفاعی در برابر انگل‌ها و عفونت‌های قارچی؛ فعالیت بیش از حد آن‌ها در ریه منجر به سندروم‌های هیپرائوزینوفیلیک (Hypereosinophilic Syndromes) می‌گردد.</p>
+      </div>
+
+      <div class="mini-card mc-purple">
+        <h5>ماست‌سل‌ها و بازوفیل‌ها (Mast Cells)</h5>
+        <p>حاوی گرانول‌های متعدد سرشار از هیستامین و لکوترین‌ها؛ دگرانولاسیون در پاسخ به آلرژن‌ها؛ تکثیر غیرطبیعی کلونال آن‌ها منجر به بیماری <strong>ماستوسیتوزیس (Mastocytosis)</strong> می‌شود.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 7 -->
+  <div class="section-header sh-red" id="sec-tcells">
+    <div class="icon">🔗</div>
+    <div>۷. لنفوسیت‌های T: مدل دو سیگنال، آنرژی، داروی آباتاسپت و سیتوتوکسیسیته</div>
+  </div>
+
+  <div class="subsection sub-red">
+    <h4>مکانیسم فعال‌سازی T سل‌ها، مولکول‌های هم‌تحریکی و سایتوکین IL-2</h4>
+    <p>پیش‌سازهای لنفوسیت T از مغز استخوان وارد <strong>تیموس (Thymus)</strong> شده و در آن‌جا گزینش می‌شوند؛ کلون‌هایی که به بافت‌های خودی واکنش شدید نشان دهند حذف می‌گردند. T سل‌ها پس از خروج، آنتی‌ژن پردازش‌شده توسط APCها را شناسایی می‌کنند:</p>
+
+    <div class="grid2">
+      <div class="mini-card mc-blue">
+        <h5>تمایز CD4 و CD8</h5>
+        <ul class="list-styled">
+          <li><span class="li-content"><strong>سلول‌های CD4+ (T helper):</strong> شناسایی آنتی‌ژن‌های ارائه‌شده بر روی <strong>MHC کلاس II</strong>؛ وظیفه هدایت ایمنی، کمک به B سل‌ها و ترشح سایتوکین‌ها.</span></li>
+          <li><span class="li-content"><strong>سلول‌های CD8+ (T cytotoxic):</strong> شناسایی آنتی‌ژن‌های ارائه‌شده بر روی <strong>MHC کلاس I</strong>؛ تخریب مستقیم سلول‌های آلوده از طریق آزادسازی گرانول‌های پرفورین.</span></li>
+        </ul>
+      </div>
+
+      <div class="mini-card mc-red">
+        <h5>ضرورت حیاتی مدل دو سیگنال (Two Signals)</h5>
+        <ul class="list-styled red">
+          <li><span class="li-content"><strong>سیگنال اول:</strong> شناسایی پپتید در شیار MHC به وسیله گیرنده T سل (TCR).</span></li>
+          <li><span class="li-content"><strong>سیگنال دوم (Co-stimulatory):</strong> برهم‌کنش لیگاند <strong>B7 (B7-1 / CD80 و B7-2 / CD86)</strong> روی سطح APC با گیرنده <strong>CD28</strong> روی سطح لنفوسیت T.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="infobox ib-yellow">
+      <span class="ib-icon">🛑</span>
+      <div>
+        <strong>پدیده آنرژی (T-cell Anergy):</strong> اگر سیگنال اول برقرار شود اما سیگنال دوم هم‌تحریکی (B7-CD28) وجود نداشته باشد، لنفوسیت T نه تنها فعال نمی‌شود، بلکه وارد حالت فلج ایمونولوژیک پایدار یا آنرژی می‌گردد که این خود یکی از سدهای محافظتی تولرانس است.
+      </div>
+    </div>
+
+    <div class="mini-card mc-purple" style="margin-top:14px;">
+      <h5>مولکول مهاری CTLA-4 و شاهکار دارویی آباتاسپت (Abatacept):</h5>
+      <p>بر روی سطح T سل فعال، گیرنده‌ای مهاری به نام <span class="tag tag-purple">CTLA-4 (CD152)</span> تعبیه شده است که تمایل اتصالی به مراتب بالاتری نسبت به CD28 برای اتصال به B7 دارد. CTLA-4 با رقابت بر سر اتصال به B7، سیگنال مهاری (Down-regulation) مخابره کرده و ترشح IL-2 را قطع می‌کند.</p>
+      <div class="kv-row"><div class="kv-key">کاربرد دارویی مدرن:</div><div class="kv-value">داروی نوترکیب <strong>آباتاسپت (Abatacept)</strong> با ساختاری مشابه CTLA-4 سنتز شده، به B7 سلول APC متصل گشته، سیگنال کمکی را بلوک کرده و لنفوسیت‌های T خودواکنشگر را در <strong>آرتریت روماتوئید (RA)</strong> خاموش می‌سازد.</div></div>
+    </div>
+
+    <div class="grid2" style="margin-top:14px;">
+      <div class="mini-card mc-teal">
+        <h5>سایتوکین IL-2 و داروهای کلسینورین اینهیبیتور</h5>
+        <p>پس از فعال‌سازی T سل، سایتوکین حیاتی <strong>اینترلوکین ۲ (IL-2)</strong> ترشح می‌شود که محرک اتوکرین تکثیر کلونال سایر T سل‌ها و B سل‌هاست. داروهای ضد رد پیوند و سرکوب‌کننده خودایمنی نظیر <strong>سیکلوسپورین و تاکرولیموس</strong> با مهار آنزیم کلسینورین، سنتز IL-2 را قطع می‌کنند.</p>
+      </div>
+
+      <div class="mini-card mc-orange">
+        <h5>گیرنده‌های T سل گاما-دلتا (γ/δ T cells)</h5>
+        <p>در حالی که غالب TCRها از زنجیره α/β ساخته شده‌اند، جمعیت کوچکی دارای زنجیره γ/δ هستند. این سلول‌ها فاقد CD4 و CD8 بوده (Double-Negative نامیده می‌شوند)، در مخاطات متراکمند و آنتی‌ژن‌های نامتعارف غیروابسته به MHC را شناسایی می‌کنند.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 8 -->
+  <div class="section-header sh-purple" id="sec-cytokines">
+    <div class="icon">📡</div>
+    <div>۸. شبکه سایتوکین‌ها: محور Th1/Th2/Th17، آسیب‌شناسی IL-17 و مهارکننده‌ها</div>
+  </div>
+
+  <div class="subsection sub-purple">
+    <h4>مسیرهای تمایز Th0، ترشحات و نقش مخرب اینترلوکین ۱۷ و ۲۳</h4>
+    <p>لنفوسیت‌های T کمک‌کننده اولیه (Th0) تحت تأثیر سیگنال‌های سایتوکینی محیط به زیرگروه‌های تخصصی تمایز می‌یابند:</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>زیرگروه Th</th>
+            <th>محرک سایتوکینی تمایز</th>
+            <th>فاکتور رونویسی</th>
+            <th>سایتوکین‌های ترشحی</th>
+            <th>اثرات فیزیولوژیک و تعادل در بدن</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Th1</strong></td>
+            <td>IL-12 و IFN-γ</td>
+            <td>T-bet / STAT4</td>
+            <td>IFN-γ, TNF-α, IL-2</td>
+            <td>دفاع درون‌سلولی و افزایش التهاب بافتی در RA.</td>
+          </tr>
+          <tr>
+            <td><strong>Th2</strong></td>
+            <td>IL-4</td>
+            <td>GATA-3 / STAT6</td>
+            <td>IL-4, IL-5, IL-10</td>
+            <td>پاسخ‌های ضد انگل و آلرژی؛ <span class="em3">IL-4 و IL-10 نقش تعدیل‌کننده و مهاری (Down-regulation)</span> بر سیستم ایمنی دارند.</td>
+          </tr>
+          <tr>
+            <td><strong>Th17</strong></td>
+            <td>TGF-β, IL-6, IL-23</td>
+            <td>RORγt / STAT3</td>
+            <td>IL-17A, IL-17F, IL-22</td>
+            <td><span class="em">آغازگر طوفان تخریب بافتی در اسپوندیلوآرتریت‌ها و آرتریت پسوریاتیک</span>.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mini-card mc-red" style="margin:16px 0;">
+      <h5>آبشار تخریب بافتی ناشی از ترشح اینترلوکین ۱۷ (IL-17):</h5>
+      <ul class="list-styled red">
+        <li><span class="li-content"><strong>روی نوتروفیل‌ها:</strong> تمایز و کموتاکسی میلیونی نوتروفیل‌ها به سمت مایع سینوویال مفاصل.</span></li>
+        <li><span class="li-content"><strong>روی سلول‌های استخوانی:</strong> القای بیان شدید <span class="tag tag-red">RANKL</span> روی استئوبلاست‌ها و تحریک جذب استخوان توسط استئوکلاست‌ها.</span></li>
+        <li><span class="li-content"><strong>روی کندروسیت‌ها:</strong> تحریک ترشح متالوپروتئینازها (MMPs) و تخریب غضروف.</span></li>
+        <li><span class="li-content"><strong>روی ماکروفاژها:</strong> تشدید تولید TNF-α، IL-1، نیتریک اکساید (NO) و پروستاگلاندین PGE2.</span></li>
+        <li><span class="li-content"><strong>روی سینوویوسیت‌ها:</strong> تحریک تکثیر لایه سینوویوم و ترشح کموکین‌ها.</span></li>
+      </ul>
+    </div>
+
+    <div class="infobox ib-teal">
+      <span class="ib-icon">💊</span>
+      <div>
+        <strong>مهارکننده‌های دارویی محور IL-23 / IL-17:</strong> سایتوکین IL-23 آزاد شده از سلول‌های APC عامل اصلی بقا و تمایز سلول‌های Th17 است. امروزه داروهای مهارکننده IL-17 (نظیر <strong>Secukinumab</strong> و <strong>Ixekizumab</strong>) و مهارکننده‌های IL-23 (نظیر <strong>Ustekinumab</strong> و <strong>Guselkumab</strong>) انقلاب درمانی در درمان اسپوندیلیت آنکیلوزان و آرتریت پسوریاتیک ایجاد کرده‌اند.
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 9 -->
+  <div class="section-header sh-indigo" id="sec-bcells">
+    <div class="icon">🛡️</div>
+    <div>۹. لنفوسیت‌های B، تمایز به پلاسماسل و بیولوژی آنتی‌بادی‌ها</div>
+  </div>
+
+  <div class="subsection sub-indigo">
+    <h4>ایمنی هومورال و ویژگی‌های ۴ گانه کلاس‌های ایمونوگلوبولین</h4>
+    <p>لنفوسیت‌های B پس از دریافت سیگنال از سلول‌های T helper تمایز یافته و به سلول‌های خاطره (Memory B cells) و کارخانه‌های ترشح آنتی‌بادی یعنی <strong>پلاسماسل‌ها (Plasma Cells)</strong> تبدیل می‌شوند:</p>
+
+    <div class="grid2">
+      <div class="mini-card mc-blue">
+        <h5>ایمونوگلوبولین IgG</h5>
+        <p>فراوان‌ترین آنتی‌بادی در سرم؛ خنثی‌کننده باکتری‌ها، ویروس‌ها و سموم؛ اپسونیزاسیون قوی و القای سمیت سلولی وابسته به آنتی‌بادی (<span class="tag tag-blue">ADCC</span>)؛ فعال‌کننده مسیر کلاسیک کمپلمان؛ تنها آنتی‌بادی عبورکننده از جفت.</p>
+      </div>
+
+      <div class="mini-card mc-green">
+        <h5>ایمونوگلوبولین IgA</h5>
+        <p>آنتی‌بادی اختصاصی سطوح مخاطی؛ ترشح در شیر مادر (Breast milk)، اشک، بزاق، عرق و ترشحات مخاطی جهت جلوگیری از اتصال و ورود پاتوژن‌ها به بافت‌های میزبان.</p>
+      </div>
+
+      <div class="mini-card mc-purple">
+        <h5>ایمونوگلوبولین IgM</h5>
+        <p>آنتی‌بادی پنتا‌مر با وزن مولکولی و دالتون بسیار بالا؛ نخستین ایمونوگلوبولین سنتز شده در پاسخ اولیه؛ قوی‌ترین فعال‌کننده مسیر کلاسیک کمپلمان به ازای هر تک‌مولکول.</p>
+      </div>
+
+      <div class="mini-card mc-orange">
+        <h5>ایمونوگلوبولین IgE</h5>
+        <p>حضور با غلظت اندک در سرم و اتصال بسیار محکم به گیرنده‌های بازوفیل‌ها و ماست‌سل‌ها؛ مسئول اصلی واکنش‌های آلرژیک، کهیر، آسم، شوک آنافیلاکسی و دفاع ضد انگلی.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 10 -->
+  <div class="section-header sh-orange" id="sec-tlrs-detailed">
+    <div class="icon">🛑</div>
+    <div>۱۰. بررسی تفصیلی گیرنده‌های شبه‌تول (جدول کامل ۱۰ گانه TLRs)</div>
+  </div>
+
+  <div class="subsection sub-orange">
+    <h4>جزئیات اسلاید ۵۲ و تأکید صریح استاد بر مطالعه دقیق این جدول</h4>
+    <p>استاد در وویس تأکید دارند: <em>«لطفاً این جدول رو خوب مطالعه بکنید که ممکنه سؤالی از این جدول خدمت عزیزان داده بشه...»</em> گیرنده‌های شبه‌تول الگوهای مولکولی پاتوژن‌ها را بر روی غشای سلولی یا درون اندوزوم‌ها شناسایی می‌کنند:</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>گیرنده (Receptor)</th>
+            <th>لیگاندهای شناسایی‌شونده (Ligands)</th>
+            <th>میکروارگانیسم هدف (Pathogen)</th>
+            <th>سلول‌های حامل گیرنده</th>
+            <th>محل درون‌سلولی</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>هترودیمر TLR1:TLR2</strong></td>
+            <td>لیپوپپتیدهای تری‌آسیل، GPI</td>
+            <td>باکتری‌ها و انگل‌ها (نظیر تریپانوزوما)</td>
+            <td>مونوسیت‌ها، دندریتیک‌سل‌ها، گرانولوسیت‌ها</td>
+            <td>غشای پلاسمایی (سطح سلول)</td>
+          </tr>
+          <tr>
+            <td><strong>هترودیمر TLR2:TLR6</strong></td>
+            <td>اسید لیپوتیکوئیک، زیموسان (Zymosan) قارچ</td>
+            <td>باکتری‌های گرم مثبت و مخمرها</td>
+            <td>مونوسیت‌ها، دندریتیک‌سل‌ها، ماست‌سل‌ها</td>
+            <td>غشای پلاسمایی (سطح سلول)</td>
+          </tr>
+          <tr>
+            <td><strong>TLR3</strong></td>
+            <td>RNA دورشته‌ای ویروسی (dsRNA)</td>
+            <td>ویروس‌ها (روتاویروس، نیل غربی)</td>
+            <td>سلول‌های NK، سلول‌های دندریتیک</td>
+            <td>غشای اندوزوم (درون سلولی)</td>
+          </tr>
+          <tr>
+            <td><strong>هومودیمر TLR4:TLR4 (همراه با MD2)</strong></td>
+            <td>لیپوپلی‌ساکارید (LPS)، پروتئین شوک حرارتی (HSP60)</td>
+            <td>باکتری‌های گرم منفی (شوک اندوتوکسیک)</td>
+            <td>ماکروفاژها، دندریتیک‌سل‌ها، ماست‌سل‌ها</td>
+            <td>غشای پلاسمایی (سطح سلول)</td>
+          </tr>
+          <tr>
+            <td><strong>TLR5</strong></td>
+            <td>فلاژلین (Flagellin تاژک باکتری)</td>
+            <td>باکتری‌های متحرک واجد تاژک</td>
+            <td>اپیتلیوم روده، سلول‌های دندریتیک</td>
+            <td>غشای پلاسمایی (سطح سلول)</td>
+          </tr>
+          <tr>
+            <td><strong>TLR7</strong></td>
+            <td>RNA تک‌رشته‌ای غنی از G/U ویروسی (ssRNA)</td>
+            <td>ویروس‌های RNAدار (مانند HIV، آنفلوآنزا)</td>
+            <td>دندریتیک پلاسماسیتوئید (pDCs)، B سل‌ها</td>
+            <td>غشای اندوزوم (درون سلولی)</td>
+          </tr>
+          <tr>
+            <td><strong>TLR8</strong></td>
+            <td>RNA تک‌رشته‌ای غنی از U (ssRNA)</td>
+            <td>ویروس‌های RNAدار</td>
+            <td>سلول‌های NK، مونوسیت‌ها</td>
+            <td>غشای اندوزوم (درون سلولی)</td>
+          </tr>
+          <tr>
+            <td><strong>TLR9</strong></td>
+            <td>DNA دئوکسی متیله نشده با نقوش CpG</td>
+            <td>باکتری‌ها و ویروس‌های خانواده هرپس</td>
+            <td>دندریتیک پلاسماسیتوئید، B سل‌ها</td>
+            <td>غشای اندوزوم (درون سلولی)</td>
+          </tr>
+          <tr>
+            <td><strong>TLR10</strong></td>
+            <td>لیگاند ناشناخته (دایمر با TLR1/2)</td>
+            <td>نامشخص</td>
+            <td>دندریتیک پلاسماسیتوئید، بازوفیل‌ها</td>
+            <td>غشای سلولی</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- SECTION 11 -->
+  <div class="section-header sh-blue" id="sec-mhc-detailed">
+    <div class="icon">🧬</div>
+    <div>۱۱. کمپلکس سازگاری بافتی اصلی (MHC / HLA): ساختار و ژنتیک کروموزوم ۶</div>
+  </div>
+
+  <div class="subsection sub-blue">
+    <h4>مقایسه ساختمانی کلاس I و II بر اساس اسلاید ۵۹</h4>
+    <p>مولکول‌های MHC که در انسان HLA نامیده می‌شوند، گلیکوپروتئین‌های غشایی هستند که جایگاه ژنومی آن‌ها بر روی <strong>بازوی کوتاه کروموزوم شماره ۶</strong> قرار دارد. این مولکول‌ها پپتیدها را در ناودان اتصالی خود قرار داده و به لنفوسیت T عرضه می‌کنند:</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>ویژگی مقایسه‌ای</th>
+            <th>MHC کلاس I (HLA Class I)</th>
+            <th>MHC کلاس II (HLA Class II)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>لوکوس ژنی</strong></td>
+            <td>HLA-A، HLA-B، HLA-C</td>
+            <td>HLA-DP، HLA-DQ، HLA-DR (رده HLA-D)</td>
+          </tr>
+          <tr>
+            <td><strong>ساختار پلی‌پپتیدی</strong></td>
+            <td>زنجیره آلفا (α1, α2, α3) همراه با <span class="tag tag-blue">β2-microglobulin</span></td>
+            <td>دو زنجیره مجزا: زنجیره آلفا و زنجیره بتا (فاقد بتا-۲ میکروگلوبولین)</td>
+          </tr>
+          <tr>
+            <td><strong>توزیع سلولی</strong></td>
+            <td>روی <strong>تمام سلول‌های هسته‌دار بدن</strong> و پلاکت‌ها (<span class="em">RBCها فاقد کلاس I هستند</span>)</td>
+            <td>منحصراً روی <strong>سلول‌های ارائه‌دهنده آنتی‌ژن حرفه‌ای (APCs)</strong>: دندریتیک، ماکروفاژ و B سل</td>
+          </tr>
+          <tr>
+            <td><strong>منشأ آنتی‌ژن</strong></td>
+            <td>پروتئین‌های سیتوزولی <strong>درون‌سلولی (Intracellular)</strong> مانند ویروس‌ها و تومورها</td>
+            <td>پروتئین‌های فاگوسیت‌شده <strong>برون‌سلولی (Extracellular)</strong> مانند باکتری‌ها</td>
+          </tr>
+          <tr>
+            <td><strong>سلول شناسایی‌کننده</strong></td>
+            <td>لنفوسیت‌های <strong>T سایتوتوکسیک (CD8+)</strong></td>
+            <td>لنفوسیت‌های <strong>T کمک‌کننده (CD4+)</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- SECTION 12 -->
+  <div class="section-header sh-green" id="sec-tolerance-etiology">
+    <div class="icon">⚖️</div>
+    <div>۱۲. تحمل ایمونولوژیک (Tolerance)، اتیولوژی خودایمنی و جداول تشخیصی</div>
+  </div>
+
+  <div class="subsection sub-green">
+    <h4>مکانیسم‌های مرکزی و محیطی عدم پاسخ‌دهی به خودی و جداول RF و Mimicry</h4>
+    <p>تولرانس به معنای عدم پاسخ آسیب‌رسان به آنتی‌ژن‌های خودی است. نقص در این توازن موجب بیماری‌های خودایمن می‌شود:</p>
+
+    <div class="grid2">
+      <div class="mini-card mc-blue">
+        <h5>۱. تولرانس مرکزی (Central Tolerance)</h5>
+        <ul class="list-styled">
+          <li><span class="li-content"><strong>در تیموس (T cells):</strong> سلول‌های نابالغی که گیرنده آن‌ها تمایل اتصالی شدید (High-affinity) به پپتیدهای خودی داشته باشند، دچار حذف کلونال آپوپتوتیک (<span class="em">Clonal Deletion</span>) می‌شوند.</span></li>
+          <li><span class="li-content"><strong>در مغز استخوان (B cells):</strong> کلون‌های با واکنش شدید به خودی، حذف شده یا تحت ویرایش گیرنده (<span class="tag tag-blue">Receptor Editing</span>) زنجیره سبک خود را تعویض می‌کنند.</span></li>
+        </ul>
+      </div>
+
+      <div class="mini-card mc-teal">
+        <h5>۲. تولرانس محیطی (Peripheral Tolerance)</h5>
+        <ul class="list-styled teal">
+          <li><span class="li-content"><strong>بی‌خبری ایمونولوژیک (Ignorance):</strong> پنهان ماندن آنتی‌ژن‌ها در پشت سدهای آناتومیک (چشم، مغز، بیضه).</span></li>
+          <li><span class="li-content"><strong>حذف فعال (Deletion):</strong> مرگ آپوپتوتیک از طریق فعال‌سازی سیگنال گیرنده مرگ <strong>Fas / FasL</strong>.</span></li>
+          <li><span class="li-content"><strong>مهار عملکردی (Inhibition):</strong> مسدود شدن پیام توسط CTLA-4 و نبود B7.</span></li>
+          <li><span class="li-content"><strong>سرکوب فعال (Suppression):</strong> سلول‌های T تنظیمی (<span class="tag tag-teal">Tregs</span>) با ترشح <strong>IL-10</strong> و <strong>TGF-β</strong> کلون‌ها را مهار می‌کنند.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Slide 114 Complete Table -->
+    <div class="table-wrap" style="margin-top:20px;">
+      <table>
+        <thead>
+          <tr>
+            <th colspan="4" style="text-align:center; background:#0d1b5e;">جدول ارزیابی حساسیت و ویژگی روماتوئید فاکتور (RF) در تیترهای مختلف (اسلاید ۱۱۴)</th>
+          </tr>
+          <tr>
+            <th>وضعیت بالینی / بیماری</th>
+            <th>تیتر ۱۵ یا بالاتر (≥15 U/ml)</th>
+            <th>تیتر ۵۰ یا بالاتر (≥50 U/ml)</th>
+            <th>تیتر ۱۰۰ یا بالاتر (≥100 U/ml)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>آرتریت روماتوئید (RA)</strong></td>
+            <td><span class="tag tag-red">66%</span></td>
+            <td>46%</td>
+            <td>26%</td>
+          </tr>
+          <tr>
+            <td><strong>سندروم شوگرن (Sjögren's)</strong></td>
+            <td>62%</td>
+            <td>52%</td>
+            <td>33%</td>
+          </tr>
+          <tr>
+            <td><strong>لوپوس سیستمیک (SLE)</strong></td>
+            <td>27%</td>
+            <td>10%</td>
+            <td>3%</td>
+          </tr>
+          <tr>
+            <td><strong>بیماری مختلط بافت همبند (MCTD)</strong></td>
+            <td>23%</td>
+            <td>13%</td>
+            <td>6%</td>
+          </tr>
+          <tr>
+            <td><strong>اسکلرودرمی (Scleroderma)</strong></td>
+            <td>44%</td>
+            <td>18%</td>
+            <td>2%</td>
+          </tr>
+          <tr>
+            <td><strong>پلی‌میوزیت (Polymyositis)</strong></td>
+            <td>18%</td>
+            <td>0%</td>
+            <td>0%</td>
+          </tr>
+          <tr>
+            <td><strong>استئوآرتریت / آرتروز (Osteoarthritis)</strong></td>
+            <td>25%</td>
+            <td>4%</td>
+            <td>4%</td>
+          </tr>
+          <tr>
+            <td><strong>افراد کنترل سالم (Healthy Controls)</strong></td>
+            <td>13%</td>
+            <td>0%</td>
+            <td>0%</td>
+          </tr>
+          <tr style="background:#edf2ff; font-weight:bold;">
+            <td>حساسیت کل آزمون (Sensitivity %)</td>
+            <td>66%</td>
+            <td>46%</td>
+            <td>26%</td>
+          </tr>
+          <tr style="background:#e8eaf6; font-weight:bold;">
+            <td>ویژگی کل آزمون (Specificity %)</td>
+            <td>74%</td>
+            <td>88% (92% †)</td>
+            <td>95% (98% †)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Molecular Mimicry & HLA Tables -->
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th colspan="3" style="text-align:center; background:#4e342e;">جدول شباهت مولکولی (Molecular Mimicry) میان عوامل عفونی و بیماری خودایمن</th>
+          </tr>
+          <tr>
+            <th>بیماری خودایمن</th>
+            <th>آنتی‌ژن‌های هدف خودی در میزبان</th>
+            <th>پاتوژن‌های آغازگر عفونی</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background:#ffebee;">
+            <td><strong>تب روماتیسمی (Rheumatic Fever)</strong></td>
+            <td>میوزین قلبی، تروپومیوزین، لامینین، ویمنتین</td>
+            <td><strong>استرپتوکوک پیوژنز (Streptococcus pyogenes)</strong></td>
+          </tr>
+          <tr>
+            <td>سندروم گیلن باره (GBS)</td>
+            <td>گانگلیوزیدها و لیپوالیگوساکاریدهای عصب محیطی</td>
+            <td><strong>کمپیلوباکتر ژژونی (Campylobacter jejuni)</strong></td>
+          </tr>
+          <tr>
+            <td>مولتیپل اسکلروزیس (MS)</td>
+            <td>پروتئین پایه‌ای میلین (MBP)</td>
+            <td>ویروس‌های EBV، سرخک و هرپس</td>
+          </tr>
+          <tr>
+            <td>اسپوندیلیت آنکیلوزان (AS)</td>
+            <td>آنتی‌ژن‌های کلاژن و بافت همبند</td>
+            <td>کلبسیلا پنومونیه (Klebsiella pneumoniae)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="infobox ib-purple">
+      <span class="ib-icon">🧬</span>
+      <div>
+        <strong>ارتباط ژنتیکی HLA و تفاوت‌های جنسیتی:</strong><br>
+        الل <strong>HLA-B27</strong> بالاترین ریسک نسبی (<span class="em">Relative Risk = 87.4</span>) را برای ابتلا به <strong>اسپوندیلیت آنکیلوزان</strong> دارد که شیوع آن در مردان جوان ۳ برابر زنان است. از سوی دیگر، در بیماری‌هایی نظیر لوپوس و شوگرن شیوع در زنان به مراتب بالاتر است (نسبت ۹ به ۱) زیرا استروژن از طریق اتصال به المان‌های پاسخ‌دهنده به استروژن (EREs) ترشح سایتوکین‌ها و اینترفرون را تحریک می‌کند.
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 13 -->
+  <div class="section-header sh-blue" id="sec-clinical">
+    <div class="icon">🏥</div>
+    <div>۱۳. مرور بیماری‌های ماژور روماتولوژیک و تظاهرات بالینی تیپیک</div>
+  </div>
+
+  <div class="subsection sub-blue">
+    <h4>بررسی اجمالی سندرم‌های روماتیسمی که در وویس استاد ذکر شدند</h4>
+
+    <div class="grid2">
+      <div class="mini-card mc-blue">
+        <h5>۱. آرتریت روماتوئید (RA)</h5>
+        <p>پلی‌آرتریت مزمن، متقارن، تخریب‌کننده غضروف ناشی از سینوویت و تشکیل بافت تهاجمی <strong>پانوس (Pannus)</strong>؛ درگیری مفاصل MCP و PIP، انحراف اولنار و دفرمیتی گردن قو (Swan Neck).</p>
+      </div>
+
+      <div class="mini-card mc-red">
+        <h5>۲. لوپوس سیستمیک (SLE) و نفریت</h5>
+        <p>بیماری سیستمیک ناشی از اتوآنتی‌بادی‌ها (Anti-dsDNA و Anti-Smith)؛ راش پروانه‌ای؛ درگیری شدید کلیه در نفریت پرولیفراتیو لوپوسی با رسوب توده‌ای <strong>IgG و کمپلمان C3</strong> و افت سرمی آن‌ها.</p>
+      </div>
+    </div>
+
+    <div class="grid2" style="margin-top:14px;">
+      <div class="mini-card mc-teal">
+        <h5>۳. اسپوندیلیت آنکیلوزان (AS)</h5>
+        <p>درگیری اسکلت محوری و مفاصل ساکروایلیاک با کمردرد التهابی صبحگاهی در مردان جوان؛ تشکیل پل‌های استخوانی موسوم به <strong>سین‌دسموفیت (Syndesmophytes)</strong> و نمای ستون فقرات خیزرانی (Bamboo Spine)؛ همراهی شدید با HLA-B27.</p>
+      </div>
+
+      <div class="mini-card mc-purple">
+        <h5>۴. میوپاتی‌های التهابی (پلی‌میوزیت و درماتومیوزیت)</h5>
+        <p>ضعف قرینه عضلات پروگزیمال اندام‌ها؛ نکروز بافت عضلانی در بیوپسی؛ علائم اختصاصی پوستی در درماتومیوزیت شامل <strong>پاپول‌های گوترون (Gottron's sign)</strong> روی بند انگشتان و <strong>راش هلیوتروپ (Heliotrope)</strong> دور چشم.</p>
+      </div>
+    </div>
+
+    <div class="grid2" style="margin-top:14px;">
+      <div class="mini-card mc-orange">
+        <h5>۵. اسکلرودرمی (اسکلروز سیستمیک)</h5>
+        <p>فیبروز پیشرونده پوست و احشا با واسطه TGF-β؛ پدیده رینود؛ عوارض خطیر ریوی شامل درگیری عروقی شریانی ریه (<span class="tag tag-red">PAH</span> با نمای پوست پیازی اینتیما) و فیبروز نسج ریه (<span class="tag tag-red">ILD</span> با نمای Ground Glass).</p>
+      </div>
+
+      <div class="mini-card mc-green">
+        <h5>۶. استئوآرتریت / آرتروز (Osteoarthritis)</h5>
+        <p>ساییدگی مکانیکی مفصل همراه با <strong>التهاب با درجه پایین سینوویوم (Low-grade Synovitis)</strong>؛ فرسایش غضروف بر اثر ترشح متالوپروتئینازها (MMPs) و نیتریک اکساید توسط کندروسیت‌های تحت استرس مکانیکی.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 14 -->
+  <div class="section-header sh-indigo" id="sec-bone">
+    <div class="icon">🦴</div>
+    <div>۱۴. بیولوژی بافت استخوان: سلول‌ها، ماتریکس و چرخه بازسازی (Remodeling)</div>
+  </div>
+
+  <div class="subsection sub-indigo">
+    <h4>ورود استاد به مبحث بافت‌ها: آناتومی استخوان، انواع ۴ گانه سلول‌ها و واحدهای BRU</h4>
+    <p>استاد تأکید دارند که استخوان بافت زنده، پویا و از نظر متابولیک فوق‌العاده فعالی است که در تنظیم الکترولیت‌های <strong>کلسیم و فسفر</strong>، حرکت بدن و پایداری اسکلت نقش دارد. استخوان‌های بلند دارای دیافیز (تنه)، متافیز و اپیفیز هستند.</p>
+
+    <div class="grid2">
+      <div class="mini-card mc-blue">
+        <h5>ماتریکس ارگانیک و معدنی استخوان</h5>
+        <div class="kv-row"><div class="kv-key">بخش آلی (Osteoid - ۳۵٪):</div><div class="kv-value">عمدتاً رشته‌های کلاژن تیپ I (بیش از ۹۰٪) همراه با پروتئین‌های غیرکلاژنی نظیر استئوکلسین.</div></div>
+        <div class="kv-row"><div class="kv-key">بخش معدنی (Inorganic - ۶۵٪):</div><div class="kv-value">بلورهای <span class="tag tag-green">کلسیم هیدروکسی‌آ‌پاتیت</span> که استحکام و مقاومت به فشار را ایجاد می‌کنند.</div></div>
+      </div>
+
+      <div class="mini-card mc-teal">
+        <h5>انواع ۴ گانه سلول‌های اختصاصی استخوان</h5>
+        <ul class="list-styled teal">
+          <li><span class="li-content"><strong>استئوپروژنیتورها:</strong> سلول‌های بنیادی مزانشیمی، پیش‌ساز استئوبلاست‌ها.</span></li>
+          <li><span class="li-content"><strong>استئوبلاست‌ها:</strong> سلول‌های سازنده ماتریکس پروتئینی (استئوئید) و ترشح آلکالین فسفاتاز.</span></li>
+          <li><span class="li-content"><strong>استئوسیت‌ها:</strong> بیش از <strong>۹۰ تا ۹۵ درصد</strong> کل سلول‌های استخوان؛ استئوبلاست‌های محصور در حفرات ماتریکس (لاکوناها) با پاهای سیتوپلاسمی دراز جهت حس مکانیکی فشار (<span class="em">Mechanosensation</span>).</span></li>
+          <li><span class="li-content"><strong>استئوکلاست‌ها:</strong> سلول‌های غول‌پیکر چندهسته‌ای خونساز از رده میلوئیدی؛ مجری انحصاری تحلیل و بازجذب استخوان (<span class="tag tag-red">Resorption</span>).</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mini-card mc-orange" style="margin-top:16px;">
+      <h5>واحدهای بازسازی استخوان (Bone Remodeling Units - BRU):</h5>
+      <p>استاد متذکر می‌شوند که استخوان دائماً در حال تخریب و نوسازی است: <strong>حدود ۱۰٪ استخوان‌ها در سال بازسازی می‌شوند</strong>؛ یعنی در عرض ۱۰ سال کل اسکلت نو می‌گردد. مراحل چرخه عبارتند از:</p>
+      <ol class="list-styled orange" style="padding-right:15px; margin-top:8px;">
+        <li><span class="li-content"><strong>۱. فاز فعال‌سازی (Activation):</strong> فراخوانی پیش‌سازهای استئوکلاست به سطح استخوان.</span></li>
+        <li><span class="li-content"><strong>۲. فاز بازجذب (Resorption):</strong> استئوکلاست‌ها مانند بولدوزر با تشکیل لبه مواج (<span class="tag tag-orange">Ruffled Border</span>)، ترشح اسید کلریدریک برای حل کریستال‌ها و آنزیم <strong>کاتپسین K</strong> کلاژن را هضم کرده و حفره‌ای به نام <strong>لاکونای هاوشیپ (Howship's Lacunae)</strong> پدید می‌آورند.</span></li>
+        <li><span class="li-content"><strong>۳. فاز بازگشت (Reversal):</strong> پاکسازی دبری‌ها توسط ماکروفاژها.</span></li>
+        <li><span class="li-content"><strong>۴. فاز ساخت (Formation):</strong> استئوبلاست‌ها درون حفره مستقر شده و استئوئید جدید می‌سازند.</span></li>
+        <li><span class="li-content"><strong>۵. فاز معدنی‌شدن (Mineralization):</strong> ترسیب املاح کلسیم و سخت شدن استخوان جدید.</span></li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- SECTION 15 -->
+  <div class="section-header sh-red" id="sec-rank">
+    <div class="icon">⚡</div>
+    <div>۱۵. محور تنظیمی RANK / RANKL / OPG (سؤال قطعی امتحانی استاد)</div>
+  </div>
+
+  <div class="subsection sub-red">
+    <h4>تأکید صریح استاد: «حتماً یک سؤال از همین قسمت خدمت عزیزان ارائه خواهد شد»</h4>
+    <p>تعامل سه مولکول لیگاند رنک، گیرنده رنک و استئوپروتجرین، شاه‌کلید تنظیم متابولیسم استخوان و پل ارتباطی سیستم ایمنی و استخوان است:</p>
+
+    <div class="grid3">
+      <div class="mini-card mc-orange">
+        <h5>۱. لیگاند رنک (RANKL)</h5>
+        <p>مولکولی که توسط <strong>استئوبلاست‌ها</strong>، فیبروبلاست‌های سینوویوم و T سل‌های فعال ترشح می‌شود. این فاکتور <span class="em">محرک اصلی فعال‌سازی استئوکلاست‌ها</span> و تخریب بافت استخوانی است.</p>
+      </div>
+
+      <div class="mini-card mc-red">
+        <h5>۲. گیرنده رنک (RANK)</h5>
+        <p>گیرنده غشایی بر روی سطح <strong>پیش‌سازهای استئوکلاستی و استئوکلاست‌های بالغ</strong>؛ با اتصال RANKL، تمایز، بلوغ و تشکیل لبه مواج استئوکلاست تحریک می‌شود.</p>
+      </div>
+
+      <div class="mini-card mc-green">
+        <h5>۳. استئوپروتجرین (OPG)</h5>
+        <p>گیرنده طعمه محلول (<span class="tag tag-green">Decoy Receptor</span>) ترشح‌شده از <strong>استئوبلاست‌ها</strong> که به صورت طبیعی به RANKL متصل شده و مانع از اتصال آن به گیرنده RANK می‌شود. <span class="em3">مهارکننده طبیعی تخریب استخوان!</span></p>
+      </div>
+    </div>
+
+    <div class="infobox ib-yellow">
+      <span class="ib-icon">⚠️</span>
+      <div>
+        <span class="hbadge">نکته تضمینی امتحانی: مکانیسم پوکی استخوان و فرسایش مفصلی:</span><br>
+        سرنوشت استخوان به نسبت غلظت <strong>RANKL به OPG</strong> بستگی دارد:
+        <ul class="list-styled orange" style="margin-top:8px;">
+          <li><span class="li-content"><strong>در سنین بالا، یائسگی (افت استروژن) و مصرف کورتون‌ها:</strong> تولید <span class="em">RANKL افزایش یافته و OPG کاهش می‌یابد</span>؛ غلبه RANKL موجب فعالیت مفرط استئوکلاست‌ها و بروز استئوپروز (پوکی استخوان) می‌شود.</span></li>
+          <li><span class="li-content"><strong>در آرتریت روماتوئید:</strong> سایتوکین‌های Th17 و سینوویوم با بالا بردن شدید نسبت RANKL به OPG، عامل حفرات فرسایش استخوانی (Erosions) در مفصل هستند.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 16 -->
+  <div class="section-header sh-teal" id="sec-cartilage">
+    <div class="icon">💧</div>
+    <div>۱۶. بیولوژی و بیومکانیک غضروف مفصلی: کندروسیت، اگریکان و مکانیک آب</div>
+  </div>
+
+  <div class="subsection sub-teal">
+    <h4>تنها سلول غضروف، لایه‌های ۴ گانه، بار منفی و تغذیه دفیوژنی</h4>
+    <p>غضروف مفصلی هیالن، لایه‌ای لغزنده بین انتهای استخوان‌ها در مفاصل دی‌آرترودیال (مانند زانو) است که ضریب اصطکاک را نزدیک به صفر می‌آورد. مایع سینوویال نیز لغزندگی را تقویت می‌کند.</p>
+
+    <div class="grid2">
+      <div class="mini-card mc-teal">
+        <h5>ماتریکس و تنها سلول غضروف</h5>
+        <ul class="list-styled teal">
+          <li><span class="li-content"><strong>سلول کندروسیت (Chondrocyte):</strong> منحصربه‌فردترین و <strong>تنها سلول موجود در بافت غضروف</strong>؛ وظیفه سنتز دائمی پروتئین‌های کلاژن تیپ II، پروتئوگلیکان‌ها و آنزیم‌های تجزیه‌کننده (MMPs).</span></li>
+          <li><span class="li-content"><strong>کلاژن تیپ ۲ (Collagen Type II):</strong> شبکه مارپیچی با مقاومت کششی و تحمل فشار فوق‌العاده بالا.</span></li>
+          <li><span class="li-content"><strong>فاقد هرگونه رگ خونی بودن (Avascular):</strong> غضروف رگ خونی ندارد! تغذیه کندروسیت‌ها (قند، املاح، اکسیژن) منحصراً از طریق <strong>پدیده انتشار (Diffusion) از مایع سینوویال</strong> حین حرکات مفصل صورت می‌گیرد.</span></li>
+        </ul>
+      </div>
+
+      <div class="mini-card mc-blue">
+        <h5>ساختار اگریکان و هیالورونان</h5>
+        <ul class="list-styled">
+          <li><span class="li-content"><strong>اسکلت هیالورونان (Hyaluronan):</strong> ستون فقرات ماتریکس غضروفی.</span></li>
+          <li><span class="li-content"><strong>مونومر اگریکان (Aggrecan):</strong> شامل پروتئین مرکزی (Core protein) متصل به هیالورونان با کمک <strong>Link protein</strong>.</span></li>
+          <li><span class="li-content"><strong>زنجیره‌های جانبی قندی:</strong> انشعابات متراکم <span class="tag tag-blue">کندروئیتین سولفات</span> و <span class="tag tag-teal">کراتان سولفات</span> با بار الکتریکی منفی.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mini-card mc-purple" style="margin:16px 0;">
+      <h5>لایه‌بندی ۴ گانه بافت‌شناسی غضروف مفصلی از سطح به عمق:</h5>
+      <div class="kv-row"><div class="kv-key">۱. لایه سطحی (Superficial Zone):</div><div class="kv-value">کندروسیت‌های مسطح و دوکی؛ فیبرهای کلاژن موازی با سطح مفصل جهت تحمل نیروهای برشی حرکتی (Shear forces).</div></div>
+      <div class="kv-row"><div class="kv-key">۲. لایه بینابینی (Transitional / Middle Zone):</div><div class="kv-value">کندروسیت‌های گرد با توزیع پراکنده و فیبرهای کلاژنی مورب و متقاطع.</div></div>
+      <div class="kv-row"><div class="kv-key">۳. لایه عمقی (Deep / Radial Zone):</div><div class="kv-value">سلول‌های کندروسیت در ستون‌های عمودی بر سطح مفصل چیده شده‌اند؛ بالاترین غلظت پروتئوگلیکان جهت جذب فشار محوری.</div></div>
+      <div class="kv-row"><div class="kv-key">خط تاید‌مارک (Tidemark) و لایه کلسیفیه:</div><div class="kv-value">مرز مشخص تاید‌مارک لایه عمقی را از غضروف کلسیفیه‌شده چسبیده به استخوان ساب‌کوندروال جدا می‌سازد.</div></div>
+    </div>
+
+    <div class="infobox ib-teal">
+      <span class="ib-icon">🧽</span>
+      <div>
+        <span class="hbadge">بیومکانیک اسفنجی و جذب آب در غضروف:</span><br>
+        زنجیره‌های کندروئیتین سولفات و کراتان سولفات دارای <strong>بار الکتریکی منفی شدید</strong> هستند که آب ($H_2O$) را به درون ماتریکس می‌کشند.<br>
+        <strong>هنگام وارد آمدن وزن و فشار به مفصل:</strong> آب مانند اسفنج از غضروف خارج شده و لایه‌ای نازک روی سطح مفصل تشکیل می‌دهد تا اصطکاک را صفر کند.<br>
+        <strong>با برداشته شدن فشار و استراحت:</strong> آب مجدداً به ماتریکس بازمی‌گردد. در آرتروز به علت تخریب قندهای سولفاته، بار منفی افت کرده و توانایی جذب آب و خاصیت اسفنجی غضروف از دست می‌رود.
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 17 -->
+  <div class="section-header sh-green" id="sec-synovium">
+    <div class="icon">🧬</div>
+    <div>۱۷. غشای سینوویال، مایع مفصلی و مفهوم فوق‌العاده حیاتی انتزیس (Enthesis)</div>
+  </div>
+
+  <div class="subsection sub-green">
+    <h4>سلول‌های سینوویوسیت و جایگاه التهاب در اسپوندیلوآرتروپاتی‌ها</h4>
+    <p>غشای سینوویال پرده پوشاننده حفره مفصلی است که شامل دو لایه اینتیما (سلولی) و ساب‌اینتیما (عروقی) می‌باشد:</p>
+
+    <div class="grid2">
+      <div class="mini-card mc-green">
+        <h5>سلول‌های لایه اینتیمای سینوویوم:</h5>
+        <ul class="list-styled green">
+          <li><span class="li-content"><strong>سینوویوسیت‌های شبه‌ماکروفاژ (Type A):</strong> سلول‌های خونساز با خاصیت فاگوسیتیک قوی و عمل به عنوان APC برای پاکسازی دبری‌های مفصل.</span></li>
+          <li><span class="li-content"><strong>سینوویوسیت‌های شبه‌فیبروبلاست (Type B):</strong> سلول‌های مزانشیمی؛ سنتزکننده اسید هیالورونیک، کلاژن و گلیکوپروتئین روان‌کننده <strong>لوبریکین (Lubricin)</strong>.</span></li>
+        </ul>
+      </div>
+
+      <div class="mini-card mc-teal">
+        <h5>مفهوم بسیار مهم انتزیس (Enthesis) در بالین:</h5>
+        <p>استاد تأکید ویژه‌ای دارند: <strong>«کلمه انتز رو خواهشاً به خاطر داشته باشین...»</strong> انتزیس محل چسبیدن تاندون‌ها، لیگامان‌ها یا کپسول مفصلی به بافت قشری استخوان است.</p>
+        <p>التهاب در این محل را <strong>انتزیت (Enthesitis)</strong> می‌نامند که مشخصه پاتولوژیک بارز و علامت تیپیک گروه <strong>اسپوندیلوآرتروپاتی‌ها</strong> نظیر اسپوندیلیت آنکیلوزان است (مانند درد و تورم در محل اتصال تاندون آشیل به استخوان پاشنه پا).</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 18 -->
+  <div class="section-header sh-orange" id="sec-muscle">
+    <div class="icon">💪</div>
+    <div>۱۸. یادآوری بافت عضلانی و ارتباط آن با میوپاتی‌های التهابی</div>
+  </div>
+
+  <div class="subsection sub-orange">
+    <h4>توصیه استاد در انتهای ویس جهت مرور بافت‌شناسی عضله</h4>
+    <p>استاد در جملات پایانی کلاس یادآور می‌شوند: <em>«یه قسمتی رو فقط می‌خوام راجع به عضله خودتون بخونید، چون در بیماری‌های روماتولوژیک بافت عضله درگیر میشه...»</em></p>
+    <div class="mini-card mc-purple">
+      <h5>اهمیت پاتوفیزیولوژیک عضله در روماتولوژی:</h5>
+      <p>در بیماری‌های خودایمن التهابی عضله یعنی <strong>پلی‌میوزیت (Polymyositis)</strong> و <strong>درماتومیوزیت (Dermatomyositis)</strong>، بافت عضلات مخطط دچار حمله اتوایمیون لنفوسیت‌ها، تخریب دسته‌جات فیبر عضلانی و آتروفی اطراف دسته‌جات (Perifascicular Atrophy) می‌شود. شناخت بافت‌شناسی غلاف‌های عضلانی (اندومیزیوم، پری‌میزیوم و اپی‌میزیوم) برای تفسیر بیوپسی عضله ضروری است.</p>
+    </div>
+  </div>
+
+  <!-- SECTION 19 -->
+  <div class="section-header sh-purple" id="sec-exam">
+    <div class="icon">⭐</div>
+    <div>۱۹. جمع‌بندی نکات طلایی و سؤالات احتمالی آزمون فیزیوپاتولوژی</div>
+  </div>
+
+  <div class="subsection sub-purple">
+    <h4>نکات با ضریب تکرار بالا که در وویس دکتر سلیمانی روی آن‌ها تأکید شد</h4>
+    <ul class="list-styled purple">
+      <li><span class="li-content"><strong>رفتار کمپلمان:</strong> در بیشتر التهاب‌ها افزایش می‌یابد، اما در بیماری فعال <span class="em">لوپوس (نفریت لوپوسی) افت C3 و C4 به علت مصرف</span> رخ می‌دهد.</span></li>
+      <li><span class="li-content"><strong>تارگت داروی آباتاسپت:</strong> مولکول B7 (CD80/CD86) روی سطح APC را مسدود کرده و مانع از سیگنال دوم CD28 T سل می‌شود.</span></li>
+      <li><span class="li-content"><strong>منبع IFN-α:</strong> سلول‌های دندریتیک پلاسماسیتوئید (pDCs) منبع اصلی آن بوده و در پاتوژنز لوپوس کلیدی هستند.</span></li>
+      <li><span class="li-content"><strong>محور رنک و اوپی‌جی:</strong> <span class="em">RANKL</span> محرک تمایز استئوکلاست و تخریب استخوان است، در حالی که <span class="em3">OPG</span> دکوی‌رسپتور مهارکننده آن است. در استئوپروز نسبت RANKL به OPG شدیداً بالا می‌رود.</span></li>
+      <li><span class="li-content"><strong>بیولوژی غضروف:</strong> فاقد هرگونه رگ خونی بوده، تنها سلول آن <strong>کندروسیت</strong> است و تغذیه آن منحصراً با انتشار از مایع سینوویال انجام می‌شود.</span></li>
+      <li><span class="li-content"><strong>بار منفی غضروف:</strong> زنجیره‌های سولفاته کندروئیتین و کراتان با بار منفی قوی آب را جذب کرده و حالت اسفنجی ضربه‌گیر را پدید می‌آورند.</span></li>
+      <li><span class="li-content"><strong>تفسیر آزمایش RF:</strong> در تیترهای پایین (۱۵)، ۲۵٪ بیماران آرتروز معمولی و ۱۳٪ افراد کاملاً سالم مثبت کاذب می‌شوند، اما در تیتر بالا اختصاصیت آن به بالای ۹۵ تا ۹۸ درصد می‌رسد.</span></li>
+      <li><span class="li-content"><strong>مفهوم انتزیس:</strong> محل اتصال تاندون/رباط به استخوان است که التهاب آن (انتزیت) نشانه بارز اسپوندیلوآرتریت‌ها است.</span></li>
+    </ul>
+  </div>
+
+</div> <!-- END MAIN -->
+
+<!-- ===================== FOOTER ===================== -->
+<div class="footer">
+  جزوه تدوین‌شده و مرتب‌شده بر اساس فایل صوتی و اسلایدهای دکتر حسین سلیمانی (استادیار روماتولوژی)<br>
+  تنظیم آموزشی فیزیوپاتولوژی پزشکی | کلیه حقوق محفوظ است.
+</div>
+
+<!-- ===== نوار شناور ابزار چند پلتفرمی ===== -->
+<div id="highlight-panel">
+  <span>🖍️ ابزار مطالعه:</span>
+  <button class="hl-btn hl-btn-yellow" onclick="applyColorHighlight('#fff59d')" title="زرد"></button>
+  <button class="hl-btn hl-btn-green" onclick="applyColorHighlight('#c8e6c9')" title="سبز"></button>
+  <button class="hl-btn hl-btn-blue" onclick="applyColorHighlight('#bbdefb')" title="آبی"></button>
+  <button class="hl-btn hl-btn-pink" onclick="applyColorHighlight('#f8bbd0')" title="صورتی"></button>
+  <button class="panel-action-btn" onclick="addNoteAtSelection()">📝 یادداشت</button>
+  <button class="panel-action-btn" onclick="viewAllNotes()">🔍 لیست یادداشت‌ها</button>
+  <button class="panel-action-btn panel-action-btn-red" onclick="clearSelectedHighlight()">❌ پاک‌کردن</button>
+  <button class="panel-action-btn" style="background:#2e7d32;" onclick="exportModifiedHTML()">📥 خروجی گرفتن از فایل</button>
+</div>
+
+<!-- مودال ثبت/ویرایش یادداشت -->
+<div class="modal-overlay" id="note-edit-modal">
+  <div class="modal-card">
+    <h4 id="modal-title">ثبت یادداشت جدید در این محل</h4>
+    <textarea class="modal-textarea" id="modal-note-input" placeholder="نکته کلاسی را وارد نمایید..."></textarea>
+    <div class="modal-actions">
+      <button class="btn btn-primary" onclick="saveNoteChanges()">💾 ذخیره</button>
+      <button class="btn btn-danger" id="btn-delete-note" onclick="deleteActiveNote()">❌ حذف یادداشت</button>
+      <button class="btn btn-secondary" onclick="closeNoteModal()">انصراف</button>
+    </div>
+  </div>
+</div>
+
+<!-- مودال لیست همه‌ی یادداشت‌ها -->
+<div class="modal-overlay" id="all-notes-modal">
+  <div class="modal-card" style="max-height: 80%; overflow-y: auto; max-width: 600px;">
+    <h4>📋 تمام یادداشت‌های ثبت‌شده</h4>
+    <div id="all-notes-list" style="margin-bottom: 20px;"></div>
+    <div class="modal-actions">
+      <button class="btn btn-secondary" onclick="closeAllNotesModal()">بستن</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== JAVASCRIPT ENGINE ===================== -->
+<script>
+  const storageStateKey = "rheumatology_session1_ordered_v2";
+  let savedRange = null; 
+  let activeMarker = null;
+
+  document.addEventListener("DOMContentLoaded", () => {
+    loadPageState();
+  });
+
+  function savePageState() {
+    const mainHTML = document.querySelector('.main').innerHTML;
+    localStorage.setItem(storageStateKey, mainHTML);
+  }
+
+  function loadPageState() {
+    const savedHTML = localStorage.getItem(storageStateKey);
+    if (savedHTML) {
+      document.querySelector('.main').innerHTML = savedHTML;
+    }
+  }
+
+  function applyColorHighlight(colorHex) {
+    const selection = window.getSelection();
+    if (!selection.rangeCount || selection.isCollapsed) {
+      alert("لطفاً ابتدا متنی از جزوه را با ماوس یا لمس طولانی انتخاب کنید.");
+      return;
+    }
+
+    const main = document.querySelector('.main');
+    const originalEditable = main.contentEditable;
+    
+    main.contentEditable = "true";
+    
+    try {
+      document.execCommand("styleWithCSS", false, true);
+      document.execCommand("backColor", false, colorHex);
+    } catch (e) {
+      console.error("خطای هایلایت:", e);
+    }
+    
+    main.contentEditable = originalEditable;
+    selection.removeAllRanges();
+    savePageState();
+  }
+
+  function clearSelectedHighlight() {
+    applyColorHighlight('transparent');
+  }
+
+  function addNoteAtSelection() {
+    const selection = window.getSelection();
+    if (!selection.rangeCount || selection.isCollapsed) {
+      alert("لطفاً ابتدا بخشی از متن را انتخاب کنید تا یادداشت به آن متصل شود.");
+      return;
+    }
+
+    savedRange = selection.getRangeAt(0).cloneRange();
+    activeMarker = null; 
+    document.getElementById("modal-title").innerText = "ثبت یادداشت جدید در این محل";
+    document.getElementById("modal-note-input").value = "";
+    document.getElementById("btn-delete-note").style.display = "none";
+    document.getElementById("note-edit-modal").style.display = "flex";
+  }
+
+  function saveNoteChanges() {
+    const text = document.getElementById("modal-note-input").value.trim();
+    if (!text) {
+      alert("لطفاً متن یادداشت را وارد کنید.");
+      return;
+    }
+
+    if (activeMarker === null) {
+      if (savedRange) {
+        const marker = document.createElement("span");
+        marker.className = "note-marker";
+        marker.setAttribute("data-note", text);
+        marker.innerHTML = `📝<span class="note-tooltip">${escapeHTML(text)}</span>`;
+        marker.contentEditable = "false";
+        
+        try {
+          savedRange.collapse(false);
+          savedRange.insertNode(marker);
+        } catch (e) {
+          console.error("Error inserting marker:", e);
+          alert("امکان درج یادداشت در این بخش به دلیل تداخل تگ‌ها وجود ندارد.");
+        }
+        savedRange = null;
+      }
+    } else {
+      activeMarker.setAttribute("data-note", text);
+      activeMarker.innerHTML = `📝<span class="note-tooltip">${escapeHTML(text)}</span>`;
+    }
+
+    closeNoteModal();
+    savePageState();
+  }
+
+  function deleteActiveNote() {
+    if (activeMarker && confirm("آیا مایل به حذف این یادداشت هستید؟")) {
+      activeMarker.remove();
+      closeNoteModal();
+      savePageState();
+    }
+  }
+
+  function closeNoteModal() {
+    document.getElementById("note-edit-modal").style.display = "none";
+    activeMarker = null;
+    savedRange = null;
+  }
+
+  document.addEventListener("click", (e) => {
+    if (e.target.classList.contains("note-marker")) {
+      activeMarker = e.target;
+      const savedText = activeMarker.getAttribute("data-note") || "";
+      document.getElementById("modal-title").innerText = "مشاهده و ویرایش یادداشت";
+      document.getElementById("modal-note-input").value = savedText;
+      document.getElementById("btn-delete-note").style.display = "inline-block";
+      document.getElementById("note-edit-modal").style.display = "flex";
+    }
+  });
+
+  function viewAllNotes() {
+    const markers = document.querySelectorAll(".note-marker");
+    const listContainer = document.getElementById("all-notes-list");
+    listContainer.innerHTML = "";
+
+    if (markers.length === 0) {
+      listContainer.innerHTML = '<p style="text-align:center; color:var(--muted); font-size:14px; padding:20px 0;">هیچ یادداشتی در متن ثبت نشده است.</p>';
+      document.getElementById("all-notes-modal").style.display = "flex";
+      return;
+    }
+
+    markers.forEach((marker, index) => {
+      const noteText = marker.getAttribute("data-note") || "";
+      const context = marker.previousSibling ? marker.previousSibling.textContent.slice(-35) : "...";
+      
+      const card = document.createElement("div");
+      card.className = "mini-card mc-blue";
+      card.style.marginBottom = "12px";
+      card.innerHTML = `
+        <div style="font-size:11px; color:var(--muted); margin-bottom:5px;">یادداشت شماره ${index + 1} (متن مجاور: "...${escapeHTML(context)}")</div>
+        <div style="font-weight:bold; font-size:14px; line-height:1.6; white-space:pre-wrap; color:var(--text);">${escapeHTML(noteText)}</div>
+        <div style="margin-top:10px; display:flex; gap:8px;">
+          <button onclick="scrollToMarker(${index})" class="tag tag-blue" style="border:none; cursor:pointer; padding:4px 10px;">🔍 پرش به محل یادداشت</button>
+          <button onclick="deleteMarkerFromList(${index})" class="tag tag-red" style="border:none; cursor:pointer; padding:4px 10px;">❌ حذف</button>
+        </div>
+      `;
+      listContainer.appendChild(card);
+    });
+
+    document.getElementById("all-notes-modal").style.display = "flex";
+  }
+
+  window.scrollToMarker = function(index) {
+    const markers = document.querySelectorAll(".note-marker");
+    if (markers[index]) {
+      closeAllNotesModal();
+      markers[index].scrollIntoView({ behavior: "smooth", block: "center" });
+      
+      const originalBg = markers[index].style.backgroundColor;
+      markers[index].style.backgroundColor = "#ff5252";
+      markers[index].style.transform = "scale(1.4)";
+      
+      setTimeout(() => {
+        markers[index].style.backgroundColor = originalBg;
+        markers[index].style.transform = "scale(1)";
+      }, 1500);
+    }
+  };
+
+  window.deleteMarkerFromList = function(index) {
+    if (confirm("آیا مایل به حذف این یادداشت هستید؟")) {
+      const markers = document.querySelectorAll(".note-marker");
+      if (markers[index]) {
+        markers[index].remove();
+        savePageState();
+        viewAllNotes(); 
+      }
+    }
+  };
+
+  function exportModifiedHTML() {
+    const docClone = document.cloneNode(true);
+    const currentMainHTML = document.querySelector('.main').innerHTML;
+    docClone.querySelector('.main').innerHTML = currentMainHTML;
+    
+    const htmlString = '<!DOCTYPE html>\n' + docClone.documentElement.outerHTML;
+    
+    const blob = new Blob([htmlString], { type: "text/html;charset=utf-8" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "rheumatology_session1_ordered.html";
+    link.click();
+  }
+
+  function closeAllNotesModal() {
+    document.getElementById("all-notes-modal").style.display = "none";
+  }
+
+  function escapeHTML(str) {
+    return str.replace(/[&<>'"]/g, 
+      tag => ({
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        "'": '&#39;',
+        '"': '&quot;'
+      }[tag] || tag)
+    );
+  }
+</script>
+
+</body>
+</html>
